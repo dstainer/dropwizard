@@ -9,7 +9,7 @@ import org.joda.time.LocalDate;
  * return a {@code 400 Bad Request} response.
  */
 public class LocalDateParam extends AbstractParam<LocalDate> {
-	
+
     public LocalDateParam(String input) {
         super(input);
     }
@@ -18,7 +18,7 @@ public class LocalDateParam extends AbstractParam<LocalDate> {
     protected String errorMessage(String input, Exception e) {
         return '"' + input + "\" is not a valid date, or date format (yyyy-mm-dd).";
     }
-    
+
     @Override
     protected LocalDate parse(String input) throws Exception {
         return new LocalDate(input);
